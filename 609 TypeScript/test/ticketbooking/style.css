@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.alert {
+    display: flex;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    row-gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;
+    opacity: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.show {
+    animation: appear 5s ease-out 0.3s;
+}
+
+.alert .icon i {
+    font-size: 50px;
+}
+
+.alert .content {
+    text-align: center;
+}
+
+.alert .content .alert-title {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    width: 500px;
+    padding: 30px;
+    transform: translate(0%, 25%);
+}
+
+.form-container h1,
+.list-container h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.input-container {
+    margin-bottom: 25px;
+}
+
+.input-container input {
+    padding: 15px 0 5px;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #010101;
+}
+
+.form-container button {
+    font-size: 16px;
+    padding: 12px 14px;
+    border: none;
+    outline: none;
+    background: #010101;
+    color: #fff;
+    margin-top: 25px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.form-container button:hover,
+.list .item button:hover {
+    opacity: 0.8;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.list-container {
+    width: 100vw;
+    padding: 50px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+}
+.list .item {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 20px;
+}
+.list .item h2 {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.list .item p {
+    font-size: 14px;
+}
+
+.list .item button {
+    font-size: 14px;
+    padding: 10px 12px;
+    border: none;
+    outline: none;
+    background: #010101;
+    color: #fff;
+    margin-top: 25px;
+    opacity: 1;
+    cursor: pointer;
+}

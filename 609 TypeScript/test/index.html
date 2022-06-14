@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" name="da" id="da">
+    <button onclick="show()">show</button>
+    <p></p>
+    <script>
+        function show() {
+            let data = document.querySelector("input").value;
+            document.querySelector("p").innerHTML = data;
+            let hehe = new Date(data);
+            console.log(hehe);
+        }
+    </script>
+</body>
+</html>
